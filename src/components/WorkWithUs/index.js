@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-import WorkWithUsLeftCardItem from "../WorkWithUsLeftCardItem";
+import WorkWithUsRightCardItem from "../WorkWithUsRightCardItem";
 
 import "./index.css";
 
@@ -78,7 +78,7 @@ const WorkWithUs = () => {
         </div>
         <ul className="work-with-us-right-card">
           {workWithUsLeftCardDetails.map((leftCardItem) => (
-            <WorkWithUsLeftCardItem key={leftCardItem.id} cardDetails={leftCardItem} />
+            <WorkWithUsRightCardItem key={leftCardItem.id} cardDetails={leftCardItem} />
           ))}
         </ul>
       </div>
