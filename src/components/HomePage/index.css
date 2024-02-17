@@ -16,7 +16,6 @@
 }
 
 .ahead-text {
-  font-family: "Roboto";
   margin-bottom: 0px;
   font-size: 18px;
   font-weight: 400;
@@ -24,7 +23,6 @@
 }
 
 .home-head {
-  font-family: "Roboto";
   font-size: 55px;
   margin-top: 10px;
   color: #000000;
@@ -48,6 +46,5 @@
 
 .rating {
   margin-top: 0px;
-  font-family: "Roboto";
   font-size: 15px;
 }

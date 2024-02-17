@@ -31,7 +31,6 @@
   display: flex;
   list-style-type: none;
   text-decoration: none;
-  font-family: "Roboto";
   color: #000000;
 }
 
@@ -43,7 +42,6 @@
   border: none;
   background-color: #000000;
   color: #ffffff;
-  font-family: "Roboto";
   padding: 20px;
   border-radius: 20px;
   display: flex;
