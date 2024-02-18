@@ -46,6 +46,16 @@ const SelfImprovement = () => (
         </div>
       ))}
     </div>
+    <div className="be-the-best-container">
+      <h3>Be the best you wit EQ</h3>
+      <p>
+        Not having your own emotions under control might be holding you back.
+      </p>
+      <p>
+        Additionally, not understanding those of others stops you from being
+        parent, friend you can be.
+      </p>
+    </div>
   </div>
 );
 

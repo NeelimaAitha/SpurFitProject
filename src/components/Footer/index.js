@@ -30,7 +30,7 @@ const Footer = () => (
     </div>
     <img
       src="https://brandeps.com/logo-download/D/Download-on-the-App-Store-logo-vector-01.svg"
-      className="app-store-image"
+      className="footer-app-store-image"
       alt="app store"
     />
     <p className="copy-right">

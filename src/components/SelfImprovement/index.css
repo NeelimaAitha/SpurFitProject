@@ -70,3 +70,20 @@
   background-color: #9182f7;
   z-index: -1;
 }
+
+.be-the-best-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.be-the-best-container h3 {
+  font-size: 30px;
+}
+
+.be-the-best-container p {
+  width: 30%;
+  line-height: 30px;
+  font-size: 18px;
+}

@@ -9,22 +9,28 @@ const RateYourSkills = () => (
       Ever wondered what others think of you?
     </h1>
     <div className="rating-skills-white-card">
-      <div className="anonymonos-timeline">
-        <div className="rating-skills-timeline-items">
-          <div className="rating-time-line-dot"></div>
-          <p className="anonymonos-boxes">You</p>
+      <div className="rating-skills-timeline-containers">
+        <div className="rating-time-line-dot you-dot"></div>
+        <div className="rating-skills-timeline-items you-box">
+          <p>You</p>
         </div>
-        <div className="rating-skills-timeline-items">
-          <div className="rating-time-line-dot"></div>
-          <p className="anonymonos-boxes">Anonymous 1</p>
+      </div>
+      <div className="rating-skills-timeline-containers">
+        <div className="rating-time-line-dot one-dot"></div>
+        <div className="rating-skills-timeline-items anonymous-bottom anonymous1">
+          <p>Anonymous 1</p>
         </div>
-        <div className="rating-skills-timeline-items">
-          <div className="rating-time-line-dot"></div>
-          <p className="anonymonos-boxes">Anonymous 2</p>
+      </div>
+      <div className="rating-skills-timeline-containers">
+        <div className="rating-time-line-dot two-dot"></div>
+        <div className="rating-skills-timeline-items anonymous2">
+          <p>Anonymous 2</p>
         </div>
-        <div className="rating-skills-timeline-items">
-          <div className="rating-time-line-dot"></div>
-          <p className="anonymonos-boxes">Anonymous 3</p>
+      </div>
+      <div className="rating-skills-timeline-container-last">
+        <div className="rating-time-line-dot three-dot"></div>
+        <div className="rating-skills-timeline-items anonymous-bottom anonymous3">
+          <p>Anonymous 3</p>
         </div>
       </div>
     </div>
