@@ -8,21 +8,21 @@ const vacanciesList = [
     role: "Senior Full-Stack Engineer",
     type: "Full-time position",
     location: "Berlin or remote",
-    salary: "65k-85k, 0.5-1.50% equity share options",
+    salary: "65-85k, 0.5-1.50% equity share options",
   },
   {
     id: 2,
     role: "Senior Full-Stack Engineer",
     type: "Full-time position",
     location: "Berlin or remote",
-    salary: "65k-85k, 0.5-1.50% equity share options",
+    salary: "65-85k, 0.5-1.50% equity share options",
   },
   {
     id: 3,
     role: "Senior Full-Stack Engineer",
     type: "Full-time position",
     location: "Berlin or remote",
-    salary: "65k-85k, 0.5-1.50% equity share options",
+    salary: "65-85k, 0.5-1.50% equity share options",
   },
 ];
 

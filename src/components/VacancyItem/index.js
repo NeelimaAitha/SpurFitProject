@@ -9,7 +9,7 @@ const VacancyItem = (props) => {
       <ul className="vacancy-details">
         <li className="vacancy-type">{type}</li>
         <li className="vacancy-location">{location}</li>
-        <li className="vacancy-salary">{salary}</li>
+        <li className="vacancy-salary">&#8364;{salary}</li>
       </ul>
     </li>
   );

@@ -35,18 +35,18 @@ const workWithUsLeftCardDetails = [
 const WorkWithUs = () => {
   const workWithTitleRef = useRef(null);
   const workWithSideTitleRef = useRef(null);
-//   useEffect(() => {
-//     gsap.from(workWithTitleRef.current, {
-//       duration: 2,
-//       x: "-100%",
-//       ease: "back.out(1.7)",
-//     });
-//     gsap.from(workWithSideTitleRef.current, {
-//       duration: 2,
-//       x: "100%",
-//       ease: "back.out(1.7)",
-//     });
-//   }, []);
+  //   useEffect(() => {
+  //     gsap.from(workWithTitleRef.current, {
+  //       duration: 2,
+  //       x: "-100%",
+  //       ease: "back.out(1.7)",
+  //     });
+  //     gsap.from(workWithSideTitleRef.current, {
+  //       duration: 2,
+  //       x: "100%",
+  //       ease: "back.out(1.7)",
+  //     });
+  //   }, []);
   return (
     <div className="work-with-us-container">
       <header className="work-with-us-header">
@@ -60,16 +60,16 @@ const WorkWithUs = () => {
       <div className="work-with-us-cards">
         <div className="work-with-us-left-card">
           <div className="about-card">
-            <p className="about-text">About</p>
-            <p className="about-description">
+            <p className="about-product-text">About</p>
+            <p className="product-about-description">
               At ahead our goal is to make self improvement fun and lasting. We
               know there's a way how to make it work. And that's what aHead is
               all about!
             </p>
           </div>
           <div className="product-card">
-            <p className="product-text">Product</p>
-            <p className="product-description">
+            <p className="about-product-text">Product</p>
+            <p className="product-about-description">
               At ahead our goal is to make self improvement fun and lasting. We
               know there's a way how to make it work. And that's what aHead is
               all about!
@@ -78,7 +78,10 @@ const WorkWithUs = () => {
         </div>
         <ul className="work-with-us-right-card">
           {workWithUsLeftCardDetails.map((leftCardItem) => (
-            <WorkWithUsRightCardItem key={leftCardItem.id} cardDetails={leftCardItem} />
+            <WorkWithUsRightCardItem
+              key={leftCardItem.id}
+              cardDetails={leftCardItem}
+            />
           ))}
         </ul>
       </div>

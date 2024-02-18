@@ -14,8 +14,9 @@ const MeetAhead = () => (
       />
       <p className="meet-ahead-content">
         A personalized pocket coach that provides bite-sized, science-driven
-        tools to boost emotional intelligent. Think of it as a pocket
-        cheerleader towards a better, more fulfilling.
+        tools to boost emotional intelligent.
+        <br /> Think of it as a pocket cheerleader towards a better, more
+        fulfilling.
       </p>
     </div>
   </div>

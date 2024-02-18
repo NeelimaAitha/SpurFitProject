@@ -2,7 +2,7 @@
   background-color: #f1edfd;
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin: 50px;
   border-radius: 30px;
   padding: 50px;
   height: 100vh;
@@ -45,10 +45,11 @@
   padding: 30px;
 }
 
-.about-text {
+.about-product-text {
   font-size: 20px;
   font-weight: 500;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 .product-card {
@@ -57,12 +58,11 @@
   border-radius: 15px;
 }
 
-.product-text {
-  font-size: 20px;
-  font-weight: 500;
-  color: #000000;
+.product-about-description {
+  font-size: 18px;
+  line-height: 28px;
+  color: #605e5e;
   margin-top: 0px;
-  margin-bottom: 5px;
 }
 
 .work-with-us-right-card {

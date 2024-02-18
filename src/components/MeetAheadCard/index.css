@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.meet-ahead-body {
+  display: flex;
+  width: 80%;
+}
+
 .meet-ahead-top-text {
   font-size: 16px;
   color: #000000;
@@ -33,7 +38,7 @@
 
 .meet-ahead-content {
   font-size: 18px;
-  color: #000000;
+  color: #605e5e;
   line-height: 30px;
   width: 50%;
 }
