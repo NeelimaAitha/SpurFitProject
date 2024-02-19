@@ -72,6 +72,18 @@
   font-size: 16px;
 }
 
+.rating-skills-title {
+  font-size: 45px;
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .rating-skills-title {
+    font-size: 25px;
+    color: #000000;
+  }
+}
+
 .you-box {
   top: -20px;
   left: -70%;

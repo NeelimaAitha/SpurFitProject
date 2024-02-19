@@ -36,24 +36,38 @@ const workWithUsLeftCardDetails = [
 const WorkWithUs = () => {
   const workWithTitleRef = useRef(null);
   const workWithSideTitleRef = useRef(null);
+  const workWithUsImage = useRef(null);
   const [animated, setAnimated] = useState(false);
   const intersection = useIntersection(workWithTitleRef, {
     root: null,
     rootMargin: "0px",
     threshold: 0.3,
   });
+  const element = workWithUsImage.current;
+  const tl = gsap.timeline();
+
   useEffect(() => {
     if (intersection && intersection.intersectionRatio > 0.3 && !animated) {
       gsap.from(workWithTitleRef.current, {
         duration: 1,
-        x: "-36%",
+        x: -70,
         ease: "power2.in",
       });
       gsap.from(workWithSideTitleRef.current, {
         duration: 1,
-        x: "100%",
+        x: 70,
         ease: "power2.in",
       });
+      tl.to(element, {
+        duration: 1,
+        x: "20%",
+        ease: "power1.inOut",
+      }).to(element, {
+        duration: 1,
+        x: "-20%",
+        ease: "power1.inOut",
+      });
+
       setAnimated(true);
     } else if (intersection && intersection.intersectionRatio === 0) {
       setAnimated(false);
@@ -73,6 +87,12 @@ const WorkWithUs = () => {
       <div className="work-with-us-cards">
         <div className="work-with-us-left-card">
           <div className="about-card">
+            <img
+              src="https://self-awareness.ahead-app.com/static/media/home_owel.e23a16a0.svg"
+              className="work-with-us-image"
+              alt="meet ahead"
+              ref={workWithUsImage}
+            />
             <p className="about-product-text">About</p>
             <p className="product-about-description">
               At ahead our goal is to make self improvement fun and lasting. We

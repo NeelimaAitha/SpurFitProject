@@ -101,6 +101,7 @@
   }
 
   .toggle-btn {
+    display: inline-block;
     border: none;
     padding: 5px;
     background-color: transparent;

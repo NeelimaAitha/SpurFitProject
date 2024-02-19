@@ -6,6 +6,7 @@ import "./index.css";
 
 const MeetAhead = () => {
   const meetAheadHeader = useRef(null);
+  const meetAheadImage = useRef(null);
   const [animated, setAnimated] = useState(false);
   const intersection = useIntersection(meetAheadHeader, {
     root: null,
@@ -13,11 +14,17 @@ const MeetAhead = () => {
     threshold: 0.3,
   });
   useEffect(() => {
-    if (intersection && intersection.intersectionRatio >0.3 && !animated) {
+    if (intersection && intersection.intersectionRatio > 0.3 && !animated) {
       gsap.from(meetAheadHeader.current, {
         duration: 1,
         x: "-70",
         ease: "power.in",
+      });
+      gsap.from(meetAheadImage.current, {
+        duration: 2,
+        opacity: 0,
+        rotate: 360,
+        ease: "power1.inOut",
       });
       setAnimated(true);
     } else if (intersection && intersection.intersectionRatio === 0) {
@@ -37,6 +44,7 @@ const MeetAhead = () => {
           src="https://self-awareness.ahead-app.com/static/media/home_owel.e23a16a0.svg"
           className="meet-ahead-image"
           alt="meet ahead"
+          ref={meetAheadImage}
         />
         <p className="meet-ahead-content">
           A personalized pocket coach that provides bite-sized, science-driven

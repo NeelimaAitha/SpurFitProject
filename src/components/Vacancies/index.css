@@ -27,7 +27,6 @@
   list-style-type: none;
   padding: 0px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 

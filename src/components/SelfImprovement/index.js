@@ -33,6 +33,7 @@ const selfImprovementsList = [
 
 const SelfImprovement = () => {
   const selfImprovementHeader = useRef(null);
+  const selfImprovementTimeline = useRef(null);
   const [animated, setAnimated] = useState(false);
   const intersection = useIntersection(selfImprovementHeader, {
     root: null,
@@ -44,6 +45,12 @@ const SelfImprovement = () => {
       gsap.from(selfImprovementHeader.current, {
         duration: 1,
         x: "-100px",
+        ease: "power.in",
+      });
+      gsap.from(selfImprovementTimeline.current, {
+        opacity: 0,
+        duration: 2,
+        y: -70,
         ease: "power.in",
       });
       setAnimated(true);
@@ -59,7 +66,7 @@ const SelfImprovement = () => {
         </p>
         <h1 className="self-improvement-title">Self-improvement. Ugh.</h1>
       </header>
-      <div className="self-improvement-timeline">
+      <div className="self-improvement-timeline" ref={selfImprovementTimeline}>
         {selfImprovementsList.map((item) => (
           <div className="timeline-container" key={item.id}>
             <div className="time-line-dot"></div>
