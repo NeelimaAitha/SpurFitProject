@@ -75,7 +75,62 @@
 
 @media screen and (max-width: 767px) {
   .download-app-btn {
-    height: 30px;
+    height: 25px;
     font-size: 12px;
+    padding: 15px;
+    margin-right: 10px;
   }
+}
+
+.download-nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list-icon {
+  display: none;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list-icon {
+    display: block;
+  }
+
+  .toggle-btn {
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.mobile-nav-items-container {
+  padding-top: 13vh;
+  display: none;
+  background-color: #f0eeee;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-nav-items-container {
+    display: block;
+  }
+}
+
+.mobile-nav-list-item {
+  margin-bottom: 20px;
+}
+
+.mobile-nav-items {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.mobile-nav-item {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000000;
 }

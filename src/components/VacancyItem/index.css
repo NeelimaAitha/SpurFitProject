@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 767px) {
   .vacancy-item {
-    width: 100%;
+    width: 90%;
     padding: 20px;
     margin-bottom: 20px;
   }

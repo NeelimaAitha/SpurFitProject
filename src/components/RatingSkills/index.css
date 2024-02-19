@@ -6,13 +6,14 @@
   margin: 40px;
   border-radius: 30px;
   padding: 50px;
-  height: 100vh;
+  height: 100%;
 }
 
 @media screen and (max-width: 767px) {
   .rating-skills-container {
     margin: 20px;
     padding: 20px;
+    height: 100%;
   }
 }
 

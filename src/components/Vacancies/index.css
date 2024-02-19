@@ -7,14 +7,20 @@
 @media screen and (max-width: 767px) {
   .vacancies-container {
     padding: 20px;
-    margin: 0px;
+    margin: 20px;
   }
 }
 
 .vacancies-title {
-  font-size: 47px;
+  font-size: 45px;
   color: #000000;
   font-family: "Roboto";
+}
+
+@media screen and (max-width: 767px) {
+  .vacancies-title {
+    font-size: 30px;
+  }
 }
 
 .vacancies-list {

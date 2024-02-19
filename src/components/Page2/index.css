@@ -44,7 +44,15 @@
   color: #000000;
   margin-bottom: 30px;
   padding-left: 90px;
-  padding-right: 590px;
+  padding-right: 90px;
+}
+
+@media screen and (max-width: 767px) {
+  .does-this-sound-text {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .emotions-list {

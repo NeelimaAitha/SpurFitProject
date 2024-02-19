@@ -62,13 +62,31 @@
   margin-right: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .app-store-image {
+    width: 100px;
+  }
+}
+
 .five-star-image {
   width: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .five-star-image {
+    width: 120px;
+  }
 }
 
 .rating {
   margin-top: 0px;
   font-size: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .rating {
+    font-size: 13px;
+  }
 }
 
 .home-image {
@@ -92,5 +110,6 @@
 @media screen and (max-width: 767px) {
   .home-in-mobile {
     display: inline-block;
+    margin-bottom: 20px;
   }
 }
