@@ -3,10 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin: 40px;
   border-radius: 30px;
   padding: 50px;
   height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+  .rating-skills-container {
+    margin: 20px;
+    padding: 20px;
+  }
 }
 
 .rating-skills-white-card {
@@ -17,6 +24,12 @@
   border-radius: 10px;
   height: 200px;
   padding: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .rating-skills-white-card {
+    display: none;
+  }
 }
 
 .anonymonos-timeline {

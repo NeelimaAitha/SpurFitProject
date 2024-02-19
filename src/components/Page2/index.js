@@ -1,3 +1,7 @@
+import { useRef, useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { useIntersection } from "react-use";
+
 import EmotionCard from "../EmotionCard";
 
 import "./index.css";
@@ -50,32 +54,53 @@ const emotionsList = [
   },
 ];
 
-const Page2 = () => (
-  <div className="page2-container">
-    <div className="eq-beats-iq-container">
-      <h3 className="eq-beats-iq-title">EQ beats IQ</h3>
-      <p className="eq-beats-iq-desciptions">
-        People with high emotional intelligence(EQ) live more fulfilled
-        lives.They tend to be happier and have more healthier relationships.
-      </p>
-      <p className="eq-beats-iq-desciptions">
-        People with high emotional intelligence(EQ) live more fulfilled
-        lives.They tend to be happier and have more healthier relationships.
-      </p>
+const Page2 = () => {
+  const emotionTitle = useRef(null);
+  const [animated, setAnimated] = useState(false);
+  const intersection = useIntersection(emotionTitle, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  });
+  useEffect(() => {
+    if (intersection && intersection.intersectionRatio > 0.3 && !animated) {
+      gsap.from(emotionTitle.current, {
+        duration: 1,
+        x: "-100px",
+        ease: "power.in",
+      });
+      setAnimated(true);
+    } else if (intersection && intersection.intersectionRatio === 0) {
+      setAnimated(false);
+    }
+  }, [intersection, animated]);
+  return (
+    <div className="page2-container">
+      <div className="eq-beats-iq-container">
+        <h3 className="eq-beats-iq-title">EQ beats IQ</h3>
+        <p className="eq-beats-iq-desciptions">
+          People with high emotional intelligence(EQ) live more fulfilled
+          lives.They tend to be happier and have more healthier relationships.
+        </p>
+        <p className="eq-beats-iq-desciptions">
+          People with high emotional intelligence(EQ) live more fulfilled
+          lives.They tend to be happier and have more healthier relationships.
+        </p>
+      </div>
+      <div className="emotions-container">
+        <h1 className="does-this-sound-text" ref={emotionTitle}>Does this sound familiar...</h1>
+        <ul className="emotions-list">
+          {emotionsList.map((emotion) => (
+            <EmotionCard
+              key={emotion.id}
+              emotionDetails={emotion}
+              isHilighted={emotion.id === "DOUBT"}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
-    <div className="emotions-container">
-      <h1 className="does-this-sound-text">Does this sound familiar...</h1>
-      <ul className="emotions-list">
-        {emotionsList.map((emotion) => (
-          <EmotionCard
-            key={emotion.id}
-            emotionDetails={emotion}
-            isHilighted={emotion.id === "DOUBT"}
-          />
-        ))}
-      </ul>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Page2;

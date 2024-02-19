@@ -5,6 +5,14 @@
   width: 25%;
 }
 
+@media screen and (max-width: 767px) {
+  .vacancy-item {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 .role {
   font-size: 20px;
   font-weight: 500;

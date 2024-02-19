@@ -1,5 +1,6 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
+import { useIntersection } from "react-use";
 
 import WorkWithUsRightCardItem from "../WorkWithUsRightCardItem";
 
@@ -35,18 +36,30 @@ const workWithUsLeftCardDetails = [
 const WorkWithUs = () => {
   const workWithTitleRef = useRef(null);
   const workWithSideTitleRef = useRef(null);
-  //   useEffect(() => {
-  //     gsap.from(workWithTitleRef.current, {
-  //       duration: 2,
-  //       x: "-100%",
-  //       ease: "back.out(1.7)",
-  //     });
-  //     gsap.from(workWithSideTitleRef.current, {
-  //       duration: 2,
-  //       x: "100%",
-  //       ease: "back.out(1.7)",
-  //     });
-  //   }, []);
+  const [animated, setAnimated] = useState(false);
+  const intersection = useIntersection(workWithTitleRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  });
+  useEffect(() => {
+    if (intersection && intersection.intersectionRatio > 0.3 && !animated) {
+      gsap.from(workWithTitleRef.current, {
+        duration: 1,
+        x: "-36%",
+        ease: "power2.in",
+      });
+      gsap.from(workWithSideTitleRef.current, {
+        duration: 1,
+        x: "100%",
+        ease: "power2.in",
+      });
+      setAnimated(true);
+    } else if (intersection && intersection.intersectionRatio === 0) {
+      setAnimated(false);
+    }
+  }, [intersection, animated]);
+
   return (
     <div className="work-with-us-container">
       <header className="work-with-us-header">

@@ -2,10 +2,17 @@
   background-color: #f1edfd;
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin: 40px;
   border-radius: 30px;
   padding: 50px;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+  .work-with-us-container {
+    margin: 20px;
+    padding: 20px;
+  }
 }
 
 .work-with-us-header {
@@ -14,9 +21,23 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .work-with-us-header {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
 .work-with-us-title {
   font-size: 45px;
   color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+  .work-with-us-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
 }
 
 .work-with-us-side-title {
@@ -25,10 +46,23 @@
   color: #661ff2;
 }
 
+@media screen and (max-width: 767px) {
+  .work-with-us-side-title {
+    font-size: 35px;
+    margin-top: 0px;
+  }
+}
+
 .work-with-us-cards {
   display: flex;
   justify-content: space-between;
   height: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  .work-with-us-cards {
+    flex-direction: column;
+  }
 }
 
 .work-with-us-left-card {
@@ -39,6 +73,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .work-with-us-left-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .about-card {
@@ -72,6 +113,15 @@
   width: 30%;
   height: 100%;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .work-with-us-right-card {
+    width: 100%;
+  }
 }
 
 ::-webkit-scrollbar {

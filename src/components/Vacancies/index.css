@@ -4,6 +4,13 @@
   padding: 50px;
 }
 
+@media screen and (max-width: 767px) {
+  .vacancies-container {
+    padding: 20px;
+    margin: 0px;
+  }
+}
+
 .vacancies-title {
   font-size: 47px;
   color: #000000;
@@ -16,4 +23,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .vacancies-list {
+    flex-direction: column;
+  }
 }

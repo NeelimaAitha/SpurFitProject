@@ -5,6 +5,11 @@ const HomePage = () => (
     <div className="home-content">
       <p className="ahead-text">Ahead app</p>
       <h1 className="home-head">Master your life by mastering your emotions</h1>
+      <img
+        src="https://self-awareness.ahead-app.com/static/media/home_owel.e23a16a0.svg"
+        className="home-image home-in-mobile"
+        alt="home"
+      />
       <div className="app-and-rating">
         <img
           src="https://brandeps.com/logo-download/D/Download-on-the-App-Store-logo-vector-01.svg"

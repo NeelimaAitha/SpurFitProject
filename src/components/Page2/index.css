@@ -8,8 +8,16 @@
 .eq-beats-iq-container {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   padding: 90px;
+}
+
+@media screen and (max-width: 767px) {
+  .eq-beats-iq-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+  }
 }
 
 .eq-beats-iq-title {
@@ -25,6 +33,12 @@
   line-height: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .eq-beats-iq-desciptions {
+    width: 100%;
+  }
+}
+
 .does-this-sound-text {
   font-size: 40px;
   color: #000000;
@@ -37,7 +51,7 @@
   list-style-type: none;
   padding-left: 0px;
   display: flex;
-  overflow: hidden;
+  overflow: auto;
   padding-top: 20px;
   padding-bottom: 20px;
 }
